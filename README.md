@@ -73,5 +73,5 @@ QuickWheel 是一款本地桌面应用程序，不收集任何用户数据。所
 
 ## 作者
 
-- GitHub: [你的GitHub用户名]
-- 邮箱: [你的邮箱]
+- GitHub: [SHI-mo-down](https://github.com/SHI-mo-down)
+- 仓库: https://github.com/SHI-mo-down/QuickWheel
