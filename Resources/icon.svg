@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- 背景圆形 -->
+  <circle cx="128" cy="128" r="120" fill="#2196F3"/>
+  
+  <!-- 内部浅色圆 -->
+  <circle cx="128" cy="128" r="90" fill="#64B5F6"/>
+  
+  <!-- 中心白色圆 -->
+  <circle cx="128" cy="128" r="35" fill="white"/>
+  
+  <!-- 扇区线条 -->
+  <line x1="128" y1="38" x2="128" y2="93" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <line x1="128" y1="163" x2="128" y2="218" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <line x1="38" y1="128" x2="93" y2="128" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <line x1="163" y1="128" x2="218" y2="128" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- 对角线 -->
+  <line x1="64.4" y1="64.4" x2="103.3" y2="103.3" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <line x1="191.6" y1="64.4" x2="152.7" y2="103.3" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <line x1="64.4" y1="191.6" x2="103.3" y2="152.7" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <line x1="191.6" y1="191.6" x2="152.7" y2="152.7" stroke="white" stroke-width="6" stroke-linecap="round"/>
+</svg>

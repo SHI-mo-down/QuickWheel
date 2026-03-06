@@ -1,0 +1,115 @@
+<UserControl x:Class="QuickWheel.Controls.HotkeyEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:services="clr-namespace:QuickWheel.Services"
+             mc:Ignorable="d"
+             d:DesignHeight="56" d:DesignWidth="360"
+             x:Name="Root"
+             Focusable="True"
+             PreviewKeyDown="OnPreviewKeyDown"
+             PreviewKeyUp="OnPreviewKeyUp"
+             MouseLeftButtonUp="OnMouseLeftButtonUp">
+    <UserControl.Resources>
+        <Storyboard x:Key="RecordingAnimation" RepeatBehavior="Forever">
+            <ColorAnimation Storyboard.TargetName="MainBorder" 
+                           Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                           From="#FF0089EF" To="#FF909090" Duration="0:0:0.6"
+                           AutoReverse="True"/>
+        </Storyboard>
+        
+        <Storyboard x:Key="WaitingAnimation" RepeatBehavior="Forever">
+            <DoubleAnimation Storyboard.TargetName="HotkeyText"
+                           Storyboard.TargetProperty="Opacity"
+                           From="1" To="0.5" Duration="0:0:0.8"
+                           AutoReverse="True"/>
+        </Storyboard>
+
+        <Storyboard x:Key="ConflictAnimation" RepeatBehavior="Forever">
+            <ColorAnimation Storyboard.TargetName="MainBorder" 
+                           Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                           From="#FFFF4444" To="#FFAAAAAA" Duration="0:0:0.4"
+                           AutoReverse="True"/>
+        </Storyboard>
+        
+        <Storyboard x:Key="PressedAnimation">
+            <ColorAnimation Storyboard.TargetName="MainBorder"
+                           Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                           To="#E8E8E8" Duration="0:0:0.05"
+                           AutoReverse="True"/>
+        </Storyboard>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Border x:Name="MainBorder"
+                Background="{DynamicResource MaterialDesignCardBackground}"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                CornerRadius="8"
+                Cursor="Hand"
+                MouseEnter="OnMouseEnter"
+                MouseLeave="OnMouseLeave">
+            <Grid Margin="14,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock x:Name="HotkeyTextBlock"
+                               Text="{Binding DisplayText, ElementName=Root}"
+                               FontSize="15"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"/>
+                    <TextBlock x:Name="HelpTextBlock"
+                               Text="{Binding HelpText, ElementName=Root}"
+                               FontSize="11"
+                               Opacity="0.6"
+                               Margin="0,2,0,0"
+                               Visibility="{Binding ShowHelpText, ElementName=Root, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                </StackPanel>
+                
+                <Button x:Name="RecordButton"
+                        Grid.Column="1"
+                        Style="{StaticResource MaterialDesignFlatButton}"
+                        Padding="10,4"
+                        Height="32"
+                        Click="OnRecordButtonClick"
+                        ToolTip="点击开始录制热键">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon x:Name="RecordIcon"
+                                               Kind="Microphone"
+                                               Width="18" Height="18"
+                                               VerticalAlignment="Center"/>
+                        <TextBlock x:Name="RecordButtonText"
+                                   Text="录制"
+                                   Margin="6,0,0,0"
+                                   VerticalAlignment="Center"
+                                   FontSize="13"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Border>
+        
+        <Border x:Name="ClearButton"
+                Width="22" Height="22"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Margin="0,0,80,0"
+                CornerRadius="11"
+                Background="{DynamicResource MaterialDesignDivider}"
+                Cursor="Hand"
+                Visibility="{Binding ShowClearButton, ElementName=Root, Converter={StaticResource BoolToVisibilityConverter}}"
+                ToolTip="清除热键"
+                MouseLeftButtonUp="OnClearButtonClick">
+            <TextBlock Text="×"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       Foreground="{DynamicResource MaterialDesignBody}"/>
+        </Border>
+    </Grid>
+</UserControl>

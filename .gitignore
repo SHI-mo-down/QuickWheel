@@ -1,0 +1,40 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.dtbcache.v2
+*.futdcache.v2
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Publish output
+publish/
+*.publish.xml
+
+# MSIX
+*.msix
+*.appx
+*.appxbundle
+
+# Certificates
+*.pfx
+*.snk

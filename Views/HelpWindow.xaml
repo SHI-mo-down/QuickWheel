@@ -1,0 +1,41 @@
+<Window x:Class="QuickWheel.Views.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:loc="clr-namespace:QuickWheel.Services"
+        mc:Ignorable="d"
+        Title="{loc:Loc Key=WindowTitle_Help}"
+        Width="450"
+        Height="400"
+        WindowStartupLocation="CenterOwner"
+        Style="{StaticResource MaterialDesignWindow}"
+        ResizeMode="NoResize">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="16">
+            <TextBlock Text="{loc:Loc Key=Help_UsageTitle}" FontWeight="Bold" FontSize="16" Margin="0,0,0,12"/>
+            <TextBlock Text="{loc:Loc Key=Help_Usage1}" Margin="0,0,0,6"/>
+            <TextBlock Text="{loc:Loc Key=Help_Usage2}" Margin="0,0,0,6"/>
+            <TextBlock Text="{loc:Loc Key=Help_Usage3}" Margin="0,0,0,6"/>
+            <TextBlock Text="{loc:Loc Key=Help_Usage4}" Margin="0,0,0,6"/>
+            <TextBlock Text="{loc:Loc Key=Help_Usage5}" Margin="0,0,0,16"/>
+
+            <TextBlock Text="{loc:Loc Key=Help_VariablesTitle}" FontWeight="Bold" FontSize="16" Margin="0,0,0,12"/>
+            <TextBlock Text="{loc:Loc Key=Help_VarClipboard}" Margin="0,0,0,6"/>
+            <TextBlock Text="{loc:Loc Key=Help_VarSelectedText}" Margin="0,0,0,6"/>
+            <TextBlock Text="{loc:Loc Key=Help_VarDate}" Margin="0,0,0,6"/>
+            <TextBlock Text="{loc:Loc Key=Help_VarTime}" Margin="0,0,0,16"/>
+
+            <TextBlock Text="{loc:Loc Key=Help_IconsTitle}" FontWeight="Bold" FontSize="16" Margin="0,0,0,12"/>
+            <TextBlock Text="{loc:Loc Key=Help_IconAuto}" Margin="0,0,0,6"/>
+            <TextBlock Text="{loc:Loc Key=Help_IconManual}" Margin="0,0,0,16"/>
+
+            <Button Content="{loc:Loc Key=Btn_OK}"
+                    Click="OkButton_Click"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    HorizontalAlignment="Right"
+                    Padding="24,4"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

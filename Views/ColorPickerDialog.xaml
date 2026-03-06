@@ -1,0 +1,75 @@
+<Window x:Class="QuickWheel.Views.ColorPickerDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:QuickWheel.Services"
+        Title="{loc:Loc Key=WindowTitle_ColorPicker}"
+        Width="500"
+        Height="450"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 标题 -->
+        <TextBlock Grid.Row="0" 
+                   Text="{loc:Loc Key=ColorPicker_Title}" 
+                   FontSize="16" 
+                   FontWeight="Bold"
+                   Margin="0,0,0,12"/>
+
+        <!-- 颜色表 -->
+        <Border Grid.Row="1" 
+                BorderBrush="#CCCCCC" 
+                BorderThickness="1" 
+                CornerRadius="4">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <WrapPanel x:Name="ColorPanel" Margin="8"/>
+            </ScrollViewer>
+        </Border>
+
+        <!-- 当前颜色预览 -->
+        <Grid Grid.Row="2" Margin="0,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" 
+                       Text="{loc:Loc Key=ColorPicker_Current}" 
+                       VerticalAlignment="Center"
+                       Margin="0,0,8,0"/>
+            <Border Grid.Column="1" 
+                    x:Name="PreviewBorder"
+                    Height="32"
+                    BorderBrush="#999999"
+                    BorderThickness="1"
+                    CornerRadius="4"/>
+            <TextBlock Grid.Column="2" 
+                       x:Name="ColorValueText"
+                       Text="#FFFFFFFF"
+                       VerticalAlignment="Center"
+                       Margin="8,0,0,0"
+                       FontFamily="Consolas"/>
+        </Grid>
+
+        <!-- 按钮 -->
+        <StackPanel Grid.Row="3" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right">
+            <Button Content="{loc:Loc Key=Btn_OK}" 
+                    IsDefault="True"
+                    Click="OkButton_Click"
+                    Width="80"
+                    Margin="0,0,8,0"/>
+            <Button Content="{loc:Loc Key=Btn_Cancel}" 
+                    IsCancel="True"
+                    Click="CancelButton_Click"
+                    Width="80"/>
+        </StackPanel>
+    </Grid>
+</Window>
