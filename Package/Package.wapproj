@@ -14,10 +14,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup>
-    <WapProjPath Condition="'$(WapProjPath)'==''">$(MSBuildExtensionsPath)\Microsoft\DesktopBridge\</WapProjPath>
+    <WapProjPath Condition="'$(WapProjPath)'==''">$(MSBuildExtensionsPath32)\Microsoft\DesktopBridge\</WapProjPath>
     <PathToXAMLWinRTImplementations>QuickWheel</PathToXAMLWinRTImplementations>
   </PropertyGroup>
-  <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.props" />
+  <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.props" Condition="Exists('$(WapProjPath)\Microsoft.DesktopBridge.props')" />
   <PropertyGroup>
     <ProjectGuid>B2C3D4E5-F6A7-8901-2345-678901BCDEF0</ProjectGuid>
     <TargetPlatformVersion>10.0.26100.0</TargetPlatformVersion>
@@ -58,5 +58,5 @@
     <Content Include="Images\SplashScreen.png" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
-  <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
+  <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" Condition="Exists('$(WapProjPath)\Microsoft.DesktopBridge.targets')" />
 </Project>
