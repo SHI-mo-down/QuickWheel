@@ -4,13 +4,13 @@
     <VisualStudioVersion>15.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|x86">
+    <ProjectConfiguration Include="Debug|AnyCPU">
       <Configuration>Debug</Configuration>
-      <Platform>x86</Platform>
+      <Platform>AnyCPU</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x86">
+    <ProjectConfiguration Include="Release|AnyCPU">
       <Configuration>Release</Configuration>
-      <Platform>x86</Platform>
+      <Platform>AnyCPU</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup>
@@ -30,14 +30,14 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
-    <Platforms>x86</Platforms>
+    <Platforms>AnyCPU</Platforms>
     <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AppxBundle>Always</AppxBundle>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AppxBundle>Always</AppxBundle>
   </PropertyGroup>
   <ItemGroup>
