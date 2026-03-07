@@ -129,7 +129,10 @@
                                         <TextBox Text="{Binding Name}" 
                                                  VerticalAlignment="Center"
                                                  Padding="2,0"
-                                                 BorderThickness="1"/>
+                                                 BorderThickness="1"
+                                                 Foreground="Black"
+                                                 CaretBrush="Black"
+                                                 SelectionBrush="#2196F3"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellEditingTemplate>
                             </DataGridTemplateColumn>
@@ -151,7 +154,10 @@
                                         <TextBox Text="{Binding Target}" 
                                                  VerticalAlignment="Center"
                                                  Padding="2,0"
-                                                 BorderThickness="1"/>
+                                                 BorderThickness="1"
+                                                 Foreground="Black"
+                                                 CaretBrush="Black"
+                                                 SelectionBrush="#2196F3"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellEditingTemplate>
                             </DataGridTemplateColumn>

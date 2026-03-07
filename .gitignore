@@ -34,6 +34,11 @@ publish/
 *.msix
 *.appx
 *.appxbundle
+AppPackages/
+BundleArtifacts/
+
+# Store Association (contains account info)
+Package.StoreAssociation.xml
 
 # Certificates
 *.pfx

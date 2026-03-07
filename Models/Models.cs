@@ -170,7 +170,7 @@ namespace QuickWheel.Models
                     new ShortcutItem
                     {
                         Id = Guid.NewGuid().ToString(),
-                        Name = "记事本",
+                        Name = "Notepad",
                         Icon = "📝",
                         ActionType = ActionType.OpenFile,
                         Target = @"C:\Windows\System32\notepad.exe",
@@ -180,7 +180,7 @@ namespace QuickWheel.Models
                     new ShortcutItem
                     {
                         Id = Guid.NewGuid().ToString(),
-                        Name = "计算器",
+                        Name = "Calculator",
                         Icon = "🧮",
                         ActionType = ActionType.OpenFile,
                         Target = @"C:\Windows\System32\calc.exe",
@@ -190,7 +190,7 @@ namespace QuickWheel.Models
                     new ShortcutItem
                     {
                         Id = Guid.NewGuid().ToString(),
-                        Name = "资源管理器",
+                        Name = "Documents",
                         Icon = "📁",
                         ActionType = ActionType.OpenFolder,
                         Target = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
@@ -200,17 +200,17 @@ namespace QuickWheel.Models
                     new ShortcutItem
                     {
                         Id = Guid.NewGuid().ToString(),
-                        Name = "百度",
+                        Name = "Google",
                         Icon = "🌐",
                         ActionType = ActionType.OpenUrl,
-                        Target = "https://www.baidu.com",
+                        Target = "https://www.google.com",
                         Arguments = "",
                         Order = 3
                     },
                     new ShortcutItem
                     {
                         Id = Guid.NewGuid().ToString(),
-                        Name = "命令提示符",
+                        Name = "Command Prompt",
                         Icon = "⌨️",
                         ActionType = ActionType.OpenFile,
                         Target = @"C:\Windows\System32\cmd.exe",

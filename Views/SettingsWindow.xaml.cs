@@ -206,6 +206,13 @@ namespace QuickWheel.Views
 
         private void ShortcutsGrid_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            // 如果点击的是 TextBox 或其他输入控件，不启动拖拽
+            if (e.OriginalSource is TextBox || e.OriginalSource is System.Windows.Controls.Primitives.TextBoxBase)
+            {
+                _draggedRow = null;
+                return;
+            }
+
             // 获取点击的行
             _draggedRow = FindVisualParent<DataGridRow>(e.OriginalSource as DependencyObject);
             if (_draggedRow != null)
