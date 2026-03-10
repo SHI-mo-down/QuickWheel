@@ -20,7 +20,9 @@
 
 从 Microsoft Store 下载安装：
 
-[Microsoft Store 链接]
+[![Microsoft Store](https://developer.microsoft.com/store/badges/images/Chinese_Simplified_get-it-from-MS.png)](https://apps.microsoft.com/store/detail/quickwheel/9P7L5L5Z5Z5Z)
+
+**注意**: 请将上面的链接替换为你的实际 Microsoft Store 链接。你可以在 Partner Center 中找到应用的商店链接。
 
 ### 手动安装
 

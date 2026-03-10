@@ -163,6 +163,9 @@ QuickWheel 是一款强大且直观的 Windows 快捷启动工具，帮助你以
 ## 定价 (Pricing)
 免费 (Free)
 
+## Microsoft Store 链接
+https://apps.microsoft.com/store/detail/quickwheel/9P7L5L5Z5Z5Z
+
 ## 隐私政策 URL
 https://github.com/SHI-mo-down/QuickWheel/blob/main/PRIVACY.md
 
